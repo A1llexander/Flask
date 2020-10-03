@@ -26,7 +26,7 @@ def render_departure(departure):
 
 @app.route('/tours/<int:id>/')
 def render_tours(id):
-    output = render_template('tour.html', id=id)
+    output = render_template('tour.html', id=id, tour=info.tours[id])
     return output
 
 app.run()
