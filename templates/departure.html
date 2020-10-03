@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block container %}
+
+{{ departure }}
+{% for tour in tours.values() %}
+    {% if tour.departure == departure %}
+        <p> {{ tour.title }} </p>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}
+
